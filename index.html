@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz Mania</title>
+
+    <link rel="shortcut icon" href="logofavicon-CRY5k7aJ.ico" type="image/x-icon">
+  <link rel="stylesheet" crossorigin href="index-t4FajYHO.css">
+</head>
+
+
+
+<body class="bg-black flex flex-col justify-center items-center md:space-y-4">
+
+
+    <!-- Main bar with logo and title -->
+    <nav class="flex items-center justify-around py-10 px-5 space-x-2  ">
+        <img src="Logo-DzEB03aK.png" alt="" class="w-32 md:w-40">
+        <span class="font-KodeMono text-xl text-white">Welcome To Quiz Mania</span>
+    </nav>
+
+
+
+
+
+    <!-- first page to choose Difficult and category  -->
+    <main class=" bg-orange-200 flex flex-col space-y-8 p-4 rounded-2xl shadow-inner mt-24 shadow-orange-950 z-10 ">
+        <span class="text-3xl text-start font-colored text-orange-950 mt-6">
+            Choose Below
+        </span>
+
+        <!-- Difficult and category section -->
+        <div class="Dropdown-Select  p-2 items-center space-y-6  justify-around md:justify-center ">
+            <div class="space-y-2 md:space-x-5">
+                <span class="font-ConcertOne text-2xl p-2">Difficulty</span>
+                <select name="" id="" class="Difficulty font-KodeMono text-xl p-1 rounded-xl outline-none ">
+                    <option value="easy" selected>Easy</option>
+                    <option value="medium">Medium</option>
+                    <option value="hard">Hard</option>
+                </select>
+            </div>
+
+            <div class="space-y-1 md:space-x-5">
+                <span class="font-ConcertOne text-2xl p-1">Category</span>
+                <select name="" id="" class="Category font-KodeMono text-xl p-1 rounded-xl outline-none">
+                    <option value="15" selected>Video Games</option>
+                    <option value="12">Music</option>
+                    <option value="18">Computers</option>
+                    <option value="21">Sports</option>
+                    <option value="27">Animals</option>
+                    <option value="31">Anime</option>
+                </select>
+            </div>
+        </div>
+        <!-- start button  -->
+        <button id="Start"
+            class="bg-orange-950 text-orange-300 text-xl font-ConcertOne px-6 py-2 rounded-lg hover:bg-orange-800 hover:text-orange-950 ">Start</button>
+
+    </main>
+
+
+
+
+
+
+    <!--Page2 full Design for Question ans -->
+    <main class="p-2 space-y-4 md:space-y-6 lg:w-1/2 opacity-0 z-0 ">
+         <div class="Score text-center flex justify-center items-center">
+                <p class="text-white font-KodeMono text-lg md:text-2xl"><span id="QuesTrack">0</span>/10</p>
+        </div>
+
+        <!-- Question Answer Section  -->
+        <div class="QnA  space-y-2 p-5 md:p-10 lg:p-0">
+
+            <!-- Question  -->
+            <div class="Question bg-[#e8751a] ">
+                <p class="p-4 w-auto rounded-sm text-xl font-semibold">Question is not showing because Api Is not
+                    fetched correctly Try the following</p>
+            </div>
+
+            <!-- array of answers  -->
+            <div class="Answers grid grid-cols-1 gap-1 md:grid-cols-custom md:gap-2">
+                <button
+                    class=" bg-[#fda403] p-3 md:p-5 rounded-sm font-medium hover:shadow-inner hover:shadow-orange-900">Reload
+                    The page . Sometime api gives rejected status</button>
+                <button
+                    class=" bg-[#fda403] p-3 md:p-5 rounded-sm font-medium hover:shadow-inner hover:shadow-orange-900">Reload
+                    The page . Sometime api gives rejected status</button>
+                <button
+                    class=" bg-[#fda403] p-3 md:p-5 rounded-sm font-medium hover:shadow-inner hover:shadow-orange-900">Reload
+                    The page . Sometime api gives rejected status</button>
+                <button
+                    class=" bg-[#fda403] p-3 md:p-5 rounded-sm font-medium hover:shadow-inner hover:shadow-orange-900">Reload
+                    The page . Sometime api gives rejected status</button>
+
+            </div>
+        </div>
+
+        <!-- next button  -->
+        <div class=" p-2 flex justify-center items-center space-x-5 md:space-x-10">
+            <button id="btn" class="bg-orange-600 w-64 p-3 text-xl font-ConcertOne rounded-lg text-orange-200 hover:bg-orange-500 hover:text-orange-950">Next</button>
+        </div>
+
+    </main>
+
+
+
+
+    <!-- game output Page 3  -->
+    <main id="" class="Page2  bg-black flex opacity-0 z-0 mt-40">
+        <div
+            class="flex Scoreboard flex-col justify-center items-center space-y-4 md:space-y-10 md:min-w-[30rem] p-2 border 2px border-black">
+            <span class="text-3xl md:text-5xl font-KodeMono text-white">ScoreCard</span>
+            <span class="text-xl md:text-3xl font-KodeMono text-white"></span>
+            <span class="bg-white p-4 rounded-xl font-ConcertOne md:text-2xl"><span class="score">10</span> / 10</span>
+            <img src="/happy.gif" class=" rounded-xl md:h-fit" alt="">
+            <button class="goBack bg-orange-600 hover:bg-orange-950 text-red-800 hover:text-orange-200 w-64 p-3 rounded-lg font-ConcertOne text-xl">Go
+                Back</button>
+        </div>
+    </main>
+
+
+
+    <script src="script.js"></script>
+</body>
+
+
+
+</html>
