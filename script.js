@@ -144,7 +144,7 @@ ScoreDisplay = () => {
         Scoreboard.children[2].childNodes[0].innerText = score;
         Scoreboard.children[3].src = "Sad_giphy.gif";
         lost.play();
-    }   else if (score > 4 && score <= 7) {
+    }   else if (score >= 4 && score <= 7) {
         Scoreboard.children[1].innerText = "Almost There";
         Scoreboard.children[2].childNodes[0].innerText = score;
         Scoreboard.children[3].src = "Almostthere.gif";
