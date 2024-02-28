@@ -12,7 +12,8 @@ const goBack = document.querySelector(".goBack")
 const Scoreboard = document.querySelector(".Scoreboard")
 let click = new Audio("change.mp3"); // )
 let won = new Audio("won.mp3");      // } --- Music files
-let lost = new Audio("lost.mp3");    // )
+let lost = new Audio("lost.mp3");
+let happy =new Audio("Happy_giphy.mp3")    // )
 let currcategory = category.value; // Storing the value of current category to change with respect to difficulty
 let currdifficulty = difficulty.value; //  Storing the value of current difficulty to change with respect to category
 let score = 0;
@@ -88,8 +89,10 @@ async function getquiz(Url, next) {
 
 
 // start button 
-Start.addEventListener('click', () => {
+Start.addEventListener('click', async() => {
     let next = 0;
+    Start.innerText="Loading..";
+    await getquiz(Url, next)
     body.children[1].classList.add("transition2")
     body.children[2].classList.add("transition1")
     for (i of difficulty) {
@@ -98,10 +101,7 @@ Start.addEventListener('click', () => {
     for (i of category) {
         i.disabled = true
     }
-    getquiz(Url, next)
-    setTimeout(() => {
-        QuesTrack.innerHTML = QuesNum;
-    }, 1000);
+    QuesTrack.innerHTML = QuesNum;
     Start.disabled = true;
 })
 
@@ -153,7 +153,7 @@ ScoreDisplay = () => {
         Scoreboard.children[1].innerText = "Good Game Dude";
         Scoreboard.children[2].childNodes[0].innerText = score;
         Scoreboard.children[3].src = "happy_giphy.gif";
-        won.play()
+        happy.play()
     }
 }
 
@@ -161,6 +161,7 @@ ScoreDisplay = () => {
 
 // Full refresh button of Page3
 goBack.addEventListener('click', () => {
+
 
     setTimeout(() => {
         location.reload();
